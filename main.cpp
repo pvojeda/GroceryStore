@@ -20,7 +20,7 @@ int main()
    
    if ( input == 'A' || input == 'a' )
    {
-   cout<<"What is the item\n";
+   cout<<"What is the item?\n";
    cin>> nameItem;
    list[numItems]=nameItem;
    numItems = numItems + 1;
