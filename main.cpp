@@ -20,14 +20,18 @@ int main()
    
    if ( input == 'A' || input == 'a' )
    {
+   if ( numItems> 4)
+   {
+   cout<<"You'll need a bigger list!\n";
+   }
+   else
+   {
    cout<<"What is the item?\n";
    cin>> nameItem;
    list[numItems]=nameItem;
    numItems = numItems + 1;
    }
-   if ( numItems> 4)
-   {
-   cout<<"You'll need a bigger list!\n";
+  
    }
 }
   while (!( input == 'Q' || input == 'q' ));
