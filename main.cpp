@@ -19,14 +19,14 @@ int main()
   cin>>input;
    
    if ( input == 'A' || input == 'a' )
-   {
+   { 
+   cout<<"What is the item?\n";
    if ( numItems> 4)
    {
    cout<<"You'll need a bigger list!\n";
    }
    else
    {
-   cout<<"What is the item?\n";
    cin>> nameItem;
    list[numItems]=nameItem;
    numItems = numItems + 1;
