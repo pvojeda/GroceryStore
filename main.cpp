@@ -15,11 +15,11 @@ int main()
   cout<<"\nEnter your choice: ";
   cout<<"\n (A)dd an item";
   cout<<"\n (Q)uit";
-  cout<<"\nYour choice (A/Q): ";
   cin>>input;
    
    if ( input == 'A' || input == 'a' )
    { 
+   cout<<"\nYour choice (A/Q): ";
    cout<<"What is the item?\n";
    if ( numItems> 4)
    {
