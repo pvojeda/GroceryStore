@@ -24,8 +24,10 @@ int main()
                         cin>> items;
                         glist.push_back(items);
                 }
-        }while (!( input == 'Q' || input == 'q' ));
-
+        }
+        while (!( input == 'Q' || input == 'q' ));
+        
+        cout<<"==ITEMS TO BUY==\n";
         if (glist.size()>0)
         {
                 for (int j=0; j < glist.size(); j++)
