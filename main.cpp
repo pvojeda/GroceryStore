@@ -27,9 +27,9 @@ int main()
         }
         while (!( input == 'Q' || input == 'q' ));
         
-        cout<<"==ITEMS TO BUY==\n";
         if (glist.size()>0)
         {
+                cout<<"==ITEMS TO BUY==\n";
                 for (int j=0; j < glist.size(); j++)
                 {
                         cout<<j+1<<" "<<glist.at(j)<<endl;
