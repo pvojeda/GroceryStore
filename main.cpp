@@ -1,46 +1,41 @@
 //Author:Pedro V Ojeda
 #include<iostream>
 #include<string>
+#include<vector>
 using namespace std;
 
 int main()
 {
-  string list[5]; //array of 5 strings
-  int numItems = 0;
-  char input;
-  string nameItem;
-    do
-   {
-  cout<<"\n==GROCERY LIST MANAGER==";
-  cout<<"\nEnter your choice: ";
-  cout<<"\n (A)dd an item";
-  cout<<"\n (Q)uit";
-  cout<<"\nYour choice (A/Q): ";
-  cin>>input;
-   
-   if ( input == 'A' || input == 'a' )
-   { 
-   cout<<"What is the item?\n";
-   cin>> nameItem;
-   if ( numItems> 4)
-   {
-   cout<<"You'll need a bigger list!\n";
-   }
-   else
-   {
-   list[numItems]=nameItem;
-   numItems = numItems + 1;
-   }
-  
-   }
-}
+        vector<string> glist;
+        string items;
+        char input;
+        do
+        {
+                cout<<"\n==GROCERY LIST MANAGER==";
+                cout<<"\nEnter your choice: ";
+                cout<<"\n (A)dd an item";
+                cout<<"\n (Q)uit";
+                cout<<"\nYour choice (A/Q): ";
+                cin>>input;
 
-  while (!( input == 'Q' || input == 'q' ));
+                if ( input == 'A' || input == 'a' )
+                { 
+                        cout<<"What is the item?\n";
+                        cin>> items;
+                        glist.push_back(items);
+                }
+        }while (!( input == 'Q' || input == 'q' ));
 
-        cout<<"==ITEMS TO BUY==\n";
-        for (int j=0; j<5; j++)
-          {
-          cout<<j+1<<" "<<list[j]<<endl;
-          }
-  return 0;
+        if (glist.size()>0)
+        {
+                for (int j=0; j < glist.size(); j++)
+                {
+                        cout<<j+1<<" "<<glist.at(j)<<endl;
+                }
+        }
+        else
+        {
+                cout<<"No items to buy!\n";
+        }
+        return 0;
 }
